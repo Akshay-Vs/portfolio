@@ -1,0 +1,70 @@
+.header {
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 50;
+
+  .bg-dark {
+    background-image: url("./images/bg.webp"),
+      linear-gradient(to right, rgba(0, 0, 0, 0.803), rgba(0, 0, 0, 0.611));
+
+    background-blend-mode: color;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+
+    filter: grayscale(100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+      background-size: 100%;
+    }
+
+    @mixin text {
+      position: relative;
+      font-weight: 500;
+      font-style: bold;
+      color: #ffffff;
+      line-height: 1.1;
+      text-align: center;
+    }
+
+    .text-main {
+      @include text;
+      font-size: 100px;
+      font-family: "Eastwood", sans-serif;
+    }
+
+    .text-roles {
+      @include text;
+      font-family: "Arial", Helvetica, sans-serif;
+      opacity: 0.7;
+      font-size: 20px;
+      margin-top: 50px;
+    }
+
+    .line {
+      position: absolute;
+      width: 460px;
+      height: 0px;
+      // left: 575px;
+      // top: 175px;
+      border: 3px solid #ffffff;
+      margin: 20px;
+      margin-top: 40px;
+      transform: translateY(36px);
+
+      @media screen and (max-width: 700px) {
+        width: 80%;
+        margin: 0px;
+        transform: translateY(20px);
+      }
+    }
+  }
+}
